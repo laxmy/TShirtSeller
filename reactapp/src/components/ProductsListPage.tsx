@@ -18,9 +18,7 @@ export const ProductsListPage = () => {
   return (
     <div className={styles.listContainer}>
       <AddTShirtDialog />
-      {tShirts.map((tee) => (
-        <TShirtCard key={tee.id} item={tee} />
-      ))}
+      {tShirts && tShirts.map((tee) => <TShirtCard key={tee.id} item={tee} />)}
     </div>
   );
 };

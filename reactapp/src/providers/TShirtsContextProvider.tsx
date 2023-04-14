@@ -12,7 +12,7 @@ export interface TShirtsContext {
   setLoading: (value: boolean) => void;
 }
 
-const TShirtsContext = createContext<TShirtsContext | undefined>(undefined);
+export const TShirtsContext = createContext<TShirtsContext | undefined>(undefined);
 
 export const TShirtsContextProvider = ({ children }: TShirtsContextProviderProps) => {
   const [tShirts, setTShirts] = useState<TShirt[]>([]);

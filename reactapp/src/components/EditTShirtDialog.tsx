@@ -23,7 +23,7 @@ export function EditTShirtDialog({ item }: { item: TShirt }) {
 
   return (
     <>
-      <IconButton onClick={onEditClick} color="primary">
+      <IconButton onClick={onEditClick} color="primary" aria-label="edit">
         <EditIcon color="primary" width={24} />
       </IconButton>
       <TShirtDialog
@@ -34,7 +34,6 @@ export function EditTShirtDialog({ item }: { item: TShirt }) {
         }
         onHandleClose={onHandleClose}
         onHandleSave={onHandleSave}
-        container={document.body}
         title={'Edit a TShirt'}
         item={item}
       />
