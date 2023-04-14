@@ -1,0 +1,23 @@
+.cardMain {
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.cardThumbnail {
+  position: relative;
+  width: 100%;
+}
+
+.cardActions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  opacity: 0;
+  top: 0;
+  right: 0;
+}
+
+.cardThumbnail:hover .cardActions {
+  opacity: 1;
+}

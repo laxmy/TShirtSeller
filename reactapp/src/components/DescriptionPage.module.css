@@ -1,0 +1,33 @@
+.descriptionContainer {
+  width: 85%;
+  margin: 10%;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 2%;
+}
+
+.descriptionBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10%;
+  width: 100%;
+}
+
+.textSection {
+  height: 80px;
+  overflow: auto;
+  width: 95%;
+  border: 1px solid #dddddd;
+  margin: 2%;
+}
