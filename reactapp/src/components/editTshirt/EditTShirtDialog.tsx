@@ -1,9 +1,9 @@
 import { IconButton } from '@mui/material';
-import { TShirt } from '../types';
-import { useActiveDialogContext, useTShirtsContext } from '../providers';
-import { TShirtDialog } from './shared/TShirtDialog';
-import { EditIcon } from '../icons';
-import { editTShirt } from '../shared';
+import { TShirt } from '../../types';
+import { useActiveDialogContext, useTShirtsContext } from '../../providers';
+import { TShirtDialog } from '../shared/TShirtDialog';
+import { EditIcon } from '../../icons';
+import { editTShirt } from '../../shared';
 
 export function EditTShirtDialog({ item }: { item: TShirt }) {
   const { activeContext, setActiveContext } = useActiveDialogContext();

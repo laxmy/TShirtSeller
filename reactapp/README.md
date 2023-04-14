@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The solution was bootstrapped with React and ASP.Net core template project available in Visual Studio
+It has 2 main folders
 
-## Available Scripts
+## reactapp
 
-In the project directory, you can run:
+The client react app written with typescript and React
 
-### `npm start`
+## webapi
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The backend Api in (ASP.NETCore) that the client can connect to for CRUD operations on TShirt entities
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Running the app locally
+
+1. Clone the repo locally
+
+2. The `reactapp` client will need its dependencies to run locally.
+   So run `npm install` on this subfolder
+
+3. Open the solution in Visual Studio and running Start/F5 will start both the server and client
+   Note: The client is set up to proxy the requests to the server that will also run locally that is specified in `setupProxy.js`
+   If your server is running on a different port than the one specified here, you will need to update this file, so that your client can connect to it.
+
+# Test
+
+Unit tests set up with jest and ts-jest
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Build
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Assumptions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. The backend is built with in-memory db in the interest of time as well as for ease of sharing
+2. Material UI is used for UI components for ease of use and consistency
+3. The layout of the UI is best suited for desktops. While it still gives a usable layout in smaller devices, it is not catering to these specifically.
+4. The UI tests are added only for one component and for demonstration purpose and do not have full coverage.
+5. Backend API written in ASP.NETCore 7.0, as I was facing some installation issues with version 5

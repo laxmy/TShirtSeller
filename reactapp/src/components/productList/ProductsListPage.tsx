@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { TShirtCard } from './shared/TShirtCard';
-import { AddTShirtDialog } from './AddTShirtDialog';
-import { fetchTShirts } from '../shared';
-import { useTShirtsContext } from '../providers';
+import { TShirtCard } from '../shared/TShirtCard';
+import { AddTShirtDialog } from '../addTshirt';
+import { fetchTShirts } from '../../shared';
+import { useTShirtsContext } from '../../providers';
 import styles from './ProductsListPage.module.css';
 
 export const ProductsListPage = () => {

@@ -1,9 +1,9 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useTShirtsContext } from '../providers';
+import { useTShirtsContext } from '../../providers';
 import styles from './DescriptionPage.module.css';
 import { Box, Paper, Table, TableCell, TableHead, TableRow, Typography } from '@mui/material';
-import { EditTShirtDialog } from './EditTShirtDialog';
-import { DeleteTShirtDialog } from './DeleteTShirtDialog';
+import { EditTShirtDialog } from '../editTshirt/EditTShirtDialog';
+import { DeleteTShirtDialog } from '../DeleteTShirtDialog';
 
 export const DescriptionPage = () => {
   const { tShirts } = useTShirtsContext();

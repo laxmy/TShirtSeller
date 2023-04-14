@@ -1,5 +1,4 @@
 import { createContext, useContext, ReactNode, useState } from 'react';
-import { TShirt } from '../types';
 
 export type ProviderProps = {
   children: ReactNode | ReactNode[];

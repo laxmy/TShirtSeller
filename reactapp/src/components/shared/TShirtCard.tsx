@@ -1,9 +1,9 @@
 import { Card, Box, Chip, CardContent, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { TShirt } from '../../types';
-import { EditTShirtDialog } from '../EditTShirtDialog';
+import { EditTShirtDialog } from '../editTshirt';
 import { DeleteTShirtDialog } from '../DeleteTShirtDialog';
 import styles from './TShirtCard.module.css';
-import { Link } from 'react-router-dom';
 
 export interface TShirtCardProps {
   item: TShirt;

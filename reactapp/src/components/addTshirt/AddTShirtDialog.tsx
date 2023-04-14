@@ -1,8 +1,8 @@
 import { Button, Card } from '@mui/material';
-import { TShirtDialog } from './shared/TShirtDialog';
-import { useActiveDialogContext, useTShirtsContext } from '../providers';
-import { TShirt } from '../types';
-import { addTShirt } from '../shared';
+import { TShirtDialog } from '../shared/TShirtDialog';
+import { useActiveDialogContext, useTShirtsContext } from '../../providers';
+import { TShirt } from '../../types';
+import { addTShirt } from '../../shared';
 import styles from './AddTShirtDialog.module.css';
 
 export function AddTShirtDialog() {
