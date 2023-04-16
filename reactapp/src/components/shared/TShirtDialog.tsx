@@ -31,7 +31,7 @@ const defaultTShirt: TShirt = {
   previewUrl:
     'https://i0.wp.com/sellmerch.org/wp-content/uploads/2019/12/Long-sleeve-Crew-neck-T-shirts_122719.png?w=500&ssl=1',
   color: '#ff9800',
-  description: 'test'
+  description: ''
 };
 
 type TShirtKeys = keyof TShirt;
@@ -119,6 +119,8 @@ export const TShirtDialog = ({
           <TextField
             name={'description'}
             label="Description"
+            value={tShirt.description}
+            onChange={handleValueChange}
             multiline
             rows={2}
             defaultValue="Optional Description"

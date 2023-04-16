@@ -9,6 +9,7 @@ export async function fetchTShirts() {
     }
   } catch (err) {
     console.log(err);
+    throw err;
   }
 }
 
@@ -27,12 +28,13 @@ export async function addTShirt(item: Omit<TShirt, 'id'>) {
     }
   } catch (err) {
     console.log(err);
+    throw err;
   }
 }
 
 export async function editTShirt(item: TShirt) {
   try {
-    const response = await fetch('/api/TShirt', {
+    const response = await fetch(`/api/TShirt/${item.id}`, {
       method: 'PUT',
       body: JSON.stringify(item),
       headers: {
@@ -41,10 +43,11 @@ export async function editTShirt(item: TShirt) {
     });
     if (response.ok) {
       const data = await response.json();
-      return item;
+      return data;
     }
   } catch (err) {
     console.log(err);
+    throw err;
   }
 }
 
@@ -59,5 +62,6 @@ export async function deleteTShirt(item: TShirt) {
     }
   } catch (err) {
     console.log(err);
+    throw err;
   }
 }

@@ -45,13 +45,13 @@ export const DescriptionPage = () => {
             </TableRow>
             <TableRow>
               <TableCell>Made</TableCell>
-              <TableCell align="right">${tShirt.made}</TableCell>
+              <TableCell align="right">{tShirt.made}</TableCell>
             </TableRow>
           </Table>
         </div>
       </div>
       <div className={styles.textSection}>
-        <Typography>{tShirt.description}</Typography>
+        <Typography>Description: {tShirt.description}</Typography>
       </div>
     </div>
   );

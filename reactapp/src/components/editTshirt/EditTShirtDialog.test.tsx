@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { EditTShirtDialog } from './editTshirt/EditTShirtDialog';
-import { ActiveDialogContext, TShirtsContext } from '../providers';
-import { TShirt } from '../types';
+import { EditTShirtDialog } from './EditTShirtDialog';
+import { ActiveDialogContext, TShirtsContext } from '../../providers';
+import { TShirt } from '../../types';
 import '@testing-library/jest-dom';
 import { Button } from '@mui/material';
 /**

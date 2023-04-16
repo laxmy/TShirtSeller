@@ -1,4 +1,5 @@
-import { ReactNode, createContext, useContext, useState } from 'react';
+import { ReactNode, createContext, useContext, useState, useEffect } from 'react';
+import { fetchTShirts } from '../shared';
 import { TShirt } from '../types';
 
 export type TShirtsContextProviderProps = {
@@ -17,6 +18,14 @@ export const TShirtsContext = createContext<TShirtsContext | undefined>(undefine
 export const TShirtsContextProvider = ({ children }: TShirtsContextProviderProps) => {
   const [tShirts, setTShirts] = useState<TShirt[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    async function fetchInitialData() {
+      const data = await fetchTShirts();
+      setTShirts(data);
+    }
+    fetchInitialData();
+  }, []);
 
   const value = {
     tShirts,
